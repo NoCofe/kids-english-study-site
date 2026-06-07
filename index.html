@@ -43,21 +43,35 @@
         </div>
       </section>
 
-      <section class="player-section" aria-labelledby="player-title">
-        <div class="section-heading">
-          <p class="eyebrow">Tap and listen</p>
-          <h2 id="player-title">点读词卡</h2>
-          <p>孩子点英文卡片，浏览器会朗读；适合第一阶段每天热身。</p>
-        </div>
-        <div class="word-grid" aria-label="点读词卡">
-          <button class="word-card word-card-coral" data-say="apple"><span class="word-visual">A</span><span class="word-en">apple</span><span class="word-zh">苹果</span><span class="word-cue">I see an apple.</span></button>
-          <button class="word-card word-card-teal" data-say="bird"><span class="word-visual">B</span><span class="word-en">bird</span><span class="word-zh">小鸟</span><span class="word-cue">The bird can fly.</span></button>
-          <button class="word-card word-card-yellow" data-say="cat"><span class="word-visual">C</span><span class="word-en">cat</span><span class="word-zh">猫</span><span class="word-cue">A little cat.</span></button>
-          <button class="word-card word-card-green" data-say="leaf"><span class="word-visual">L</span><span class="word-en">leaf</span><span class="word-zh">叶子</span><span class="word-cue">Green leaf.</span></button>
-          <button class="word-card word-card-blue" data-say="car"><span class="word-visual">C</span><span class="word-en">car</span><span class="word-zh">小车</span><span class="word-cue">The car goes fast.</span></button>
-          <button class="word-card word-card-mint" data-say="open"><span class="word-visual">O</span><span class="word-en">open</span><span class="word-zh">打开</span><span class="word-cue">Open and shut.</span></button>
-        </div>
-      </section>
+      <div id="flashcard-app" class="flashcard-app">
+        <section class="practice-panel" aria-labelledby="practice-title">
+          <div class="section-heading">
+            <p class="eyebrow">Tap and listen</p>
+            <h2 id="practice-title">今日点读 12 张</h2>
+            <p id="practice-copy">正在加载从 PDF 切出的完整图文闪卡。</p>
+          </div>
+          <div class="practice-actions">
+            <button id="shuffle-cards" type="button">换一组</button>
+            <span id="active-theme">全主题</span>
+          </div>
+          <div id="practice-grid" class="practice-grid"></div>
+        </section>
+
+        <section class="library-section" id="library" aria-labelledby="library-title">
+          <div class="section-heading">
+            <p class="eyebrow">Flashcard library</p>
+            <h2 id="library-title">完整闪卡库</h2>
+            <p id="library-copy">支持搜索、主题筛选和点读。</p>
+          </div>
+          <div class="library-toolbar">
+            <label><span>搜索</span><input id="card-search" placeholder="apple / animals / hello" type="search" /></label>
+            <div id="theme-tabs" class="theme-tabs" aria-label="主题筛选"></div>
+          </div>
+          <p id="result-count" class="result-count"></p>
+          <div id="card-gallery" class="card-gallery"></div>
+          <button id="load-more" class="load-more" type="button">再加载 48 张</button>
+        </section>
+      </div>
 
       <section class="stages-section" id="stages" aria-labelledby="stages-title">
         <div class="section-heading">
